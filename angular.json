@@ -32,7 +32,9 @@
               "src/styles.sass",
               "node_modules/bulma/css/bulma.css"
             ],
-            "scripts": []
+            "scripts": [
+			"node_modules/jquery/dist/jquery.min.js"
+			]
           },
           "configurations": {
             "production": {
