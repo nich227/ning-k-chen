@@ -33,7 +33,7 @@
             },
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "src/app/navbar/nav-burger.js"
+              "src/assets/scripts/nav-burger.js"
             ]
           },
           "configurations": {

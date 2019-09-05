@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run css-watch",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "css-build": "node-sass --omit-source-map-url src/app/navbar/navbar.component.sass src/app/navbar/navbar.component.css",
-    "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
+    "css-watch": "npm run css-build -- --watch"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +29,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.1",
-    "@angular/cli": "~8.1.1",
+    "@angular/cli": "^8.3.3",
     "@angular/compiler-cli": "~8.1.1",
     "@angular/language-service": "~8.1.1",
     "@types/jasmine": "~3.3.8",
