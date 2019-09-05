@@ -1,5 +1,5 @@
 html
-  overflow-y: hidden
+  overflow: hidden
 .fadeInElement
   opacity: 0
   animation: fadeIn 2s forwards
@@ -10,7 +10,8 @@ html
 .hero.has-background
   position: relative
   overflow: hidden
-
+.navbar-item:hover
+  transition: 0.3s
 .hero-background
   position: absolute
   object-fit: cover
@@ -24,6 +25,7 @@ html
   opacity: 0.3
 a
   text-decoration: none !important
+  color: #000000
 .profile-pic
   border-radius: 50%
   height: 225px
