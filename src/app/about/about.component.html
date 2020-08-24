@@ -27,10 +27,9 @@
 
         <div id="navBar" class="navbar-menu fadeInElement">
           <div class="navbar-start">
-            <a routerLink="/" class="navbar-item">Home</a>
-            <a routerLink="/about" class="navbar-item">About me</a>
-            <!--<a class="navbar-item">Projects</a>-->
-            <a routerLink="/contact" class="navbar-item">Contact me</a>
+            <a href="/" class="navbar-item">Home</a>
+            <a href="/about" class="navbar-item">About me</a>
+            <a href="/projects" class="navbar-item">Projects</a>
             <a href="https://github.com/nich227" class="navbar-item"
               ><i class="fab fa-github"></i
             ></a>
@@ -50,14 +49,55 @@
 
     <!--Hero body-->
     <div class="hero-body">
-      <div class="container">
-        <img class="profile-pic" src="../../assets/images/me.jpg" />
-        <br /><br />
-        <h1 class="title">Kevin Chen</h1>
-        <h2 class="subtitle">
-          Senior studying Software Engineering at the University of Texas at
-          Dallas
-        </h2>
+      <div class="tile is-ancestor">
+        <div class="tile is-horizontal">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <div class="tile is-child notification">
+                <div class="card-image">
+                  <img width="350vh" src="../../assets/images/me.jpg" />
+                </div>
+                <div class="card-content">
+                  <h1 class="title">Kevin Chen</h1>
+                  <hr />
+                  Software Developer Intern
+                  <br />
+                  American Airlines
+                </div>
+              </div>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <div class="tile is-child notification">
+                <div class="card-content">
+                  <h1 class="title">About me</h1>
+                  <hr />
+                  <p style="font-size: 16px; padding-bottom: 20px;">
+                    I'm an experienced coder that is adept to learning both
+                    inside and outside of the classroom. I am currently focused
+                    on taking classes related to the Artificial Intelligence and
+                    Machine Learning fields. Outside of class, I have
+                    participated in numerous hackathons, and I am currently an
+                    intern at American Airlines. Apart from coding, my other
+                    hobbies are travelling, playing table tennis, hiking, and
+                    cooking!
+                  </p>
+                  <div class="card" id="skills-card">
+                    <div class="card-content">
+                      <h1 class="title" style="font-size: 18px;">Skills</h1>
+                      <div class="field is-grouped is-grouped-multiline">
+                        <div class="control" *ngFor="let skill of SkillsList">
+                          <div class="tags has-addons">
+                            <p class="tag is-link">{{ skill.skill }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -73,5 +113,4 @@
       </p>
     </div>
   </div>
-
 </html>

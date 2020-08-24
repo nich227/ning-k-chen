@@ -1,0 +1,65 @@
+[
+  {
+      "skill": "Java"
+  },
+  {
+      "skill": "Kotlin"
+  },
+  {
+      "skill": "C++"
+  },
+  {
+      "skill": "C"
+  },
+  {
+      "skill": "Python"
+  },
+  {
+      "skill": "Bash"
+  },
+  {
+      "skill": "Azure"
+  },
+  {
+      "skill": "Netlify"
+  },
+  {
+      "skill": "Spring Boot"
+  },
+  {
+      "skill": "Artificial Intelligence"
+  },
+  {
+      "skill": "Machine Learning"
+  },
+  {
+      "skill": "Requirements Engineering"
+  },
+  {
+      "skill": "Project Management"
+  },
+  {
+      "skill": "Angular"
+  },
+  {
+      "skill": "HTML"
+  },
+  {
+      "skill": "CSS"
+  },
+  {
+      "skill": "JavaScript"
+  },
+  {
+      "skill": "jQuery"
+  },
+  {
+      "skill": "MySQL"
+  },
+  {
+      "skill": "MongoDB"
+  },
+  {
+      "skill": "TypeScript"
+  }
+]
