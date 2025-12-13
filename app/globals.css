@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: 142 76% 96%;
+  --foreground: 120 10% 20%;
+  --card: 142 50% 98%;
+  --card-foreground: 120 10% 20%;
+  --primary: 142 76% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 142 30% 90%;
+  --muted: 142 30% 85%;
+  --muted-foreground: 120 10% 40%;
+  --accent: 142 50% 95%;
+  --border: 142 20% 85%;
+  --ring: 142 76% 36%;
+}
+
+.dark {
+  --background: 120 10% 5%;
+  --foreground: 120 5% 90%;
+  --card: 120 10% 8%;
+  --card-foreground: 120 5% 90%;
+  --primary: 142 76% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 120 10% 15%;
+  --muted: 120 10% 20%;
+  --muted-foreground: 120 5% 60%;
+  --accent: 120 10% 12%;
+  --border: 120 10% 20%;
+  --ring: 142 76% 36%;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-card: hsl(var(--card));
+  --color-muted: hsl(var(--muted));
+  --color-border: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(242, 250, 242, 0.8) 0%, rgba(242, 250, 242, 0.7) 100%);
+  backdrop-filter: blur(60px) saturate(250%) contrast(1.1) brightness(1.05);
+  -webkit-backdrop-filter: blur(60px) saturate(250%) contrast(1.1) brightness(1.05);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2),
+              0 2px 8px 0 rgba(74, 222, 128, 0.1),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.6),
+              inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+  will-change: backdrop-filter;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+@supports not (backdrop-filter: blur(60px)) {
+  .glass {
+    background: rgba(242, 250, 242, 0.95);
+  }
+}
+
+.dark .glass {
+  background: linear-gradient(135deg, rgba(13, 26, 13, 0.85) 0%, rgba(13, 26, 13, 0.75) 100%);
+  backdrop-filter: blur(60px) saturate(250%) contrast(1.15) brightness(0.85);
+  -webkit-backdrop-filter: blur(60px) saturate(250%) contrast(1.15) brightness(0.85);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
+              0 2px 8px 0 rgba(74, 222, 128, 0.15),
+              inset 0 1px 0 0 rgba(74, 222, 128, 0.25),
+              inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+  will-change: backdrop-filter;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+@supports not (backdrop-filter: blur(60px)) {
+  .dark .glass {
+    background: rgba(13, 26, 13, 0.95);
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(142, 76, 36, 0.15);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.1),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+@keyframes typing {
+  to { max-width: 10ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 3px solid hsl(var(--primary));
+  max-width: 0;
+  animation: typing 2s steps(9) forwards, blink 0.75s step-end infinite;
+}
+
+
